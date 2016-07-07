@@ -56,7 +56,7 @@ public class Restaurant {
 //        customers.add(customers.size(), 
 //                new Customer("Last Customer", tables, orderSoups, orderCakes,
 //                orderCoffee, soups, cakes, coffee));
-//        customers.get(customers.size() - 1).start();
+//        customers.get(customers.size() - 1).start();/
         
         for (int i = 0; i < customers.size(); i++) {
             customers.get(i).join();
@@ -64,6 +64,7 @@ public class Restaurant {
         soupsCook.join();
         confectioner.join();
         bartender.join();
+        
         System.out.println("Restaurant is empty.");
     }
     
