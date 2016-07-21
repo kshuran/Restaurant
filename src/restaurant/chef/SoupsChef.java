@@ -3,9 +3,9 @@ package restaurant.chef;
 import java.util.Queue;
 import restaurant.dishes.Soup;
 
-public class SoupsCook extends Cook<Integer, Soup> {
+public class SoupsChef extends Shef<Integer, Soup> {
     
-    public SoupsCook(Queue<Integer> order, Queue<Soup> soups) {
+    public SoupsChef(Queue<Integer> order, Queue<Soup> soups) {
         super(order, soups);
     }
 

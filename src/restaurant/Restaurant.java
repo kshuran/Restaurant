@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Queue;
 import restaurant.chef.Bartender;
 import restaurant.chef.Confectioner;
-import restaurant.chef.Cook;
-import restaurant.chef.SoupsCook;
+import restaurant.chef.Shef;
+import restaurant.chef.SoupsChef;
 import restaurant.dishes.Cake;
 import restaurant.dishes.Coffee;
 import restaurant.dishes.Soup;
@@ -30,9 +30,9 @@ public class Restaurant {
         Queue<Cake> cakes = new LinkedList<>();
         Queue<Coffee> coffee = new LinkedList<>();
         
-        Cook<Integer, Soup> s = new SoupsCook(orderSoups, soups);
-        Cook<Integer, Cake> ck = new Confectioner(orderCakes, cakes);
-        Cook<Integer, Coffee> b = new Bartender(orderCoffee, coffee);
+        Shef<Integer, Soup> s = new SoupsChef(orderSoups, soups);
+        Shef<Integer, Cake> ck = new Confectioner(orderCakes, cakes);
+        Shef<Integer, Coffee> b = new Bartender(orderCoffee, coffee);
         
         Thread soupsCook = new Thread(s);
         Thread confectioner = new Thread(ck);
