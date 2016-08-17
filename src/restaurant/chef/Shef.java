@@ -87,7 +87,7 @@ public abstract class Shef<Integer, T extends Dish> implements Runnable {
         while (true) {
             try {
                 takeOrder();
-                if (Thread.currentThread().isInterrupted()) {
+                while (Thread.currentThread().isInterrupted()) {
                     System.out.println(this
                             .getClass().getSimpleName() + " has end to cook.");
                     return;
